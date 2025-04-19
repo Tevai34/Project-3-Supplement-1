@@ -1,6 +1,6 @@
 # test_areas.py
 import unittest
-from areas import area_rectangle, area_circle, area_triangle
+from test_areas import area_rectangle, area_circle, area_triangle
 
 class TestAreas(unittest.TestCase):
     def test_area_rectangle_regular(self):

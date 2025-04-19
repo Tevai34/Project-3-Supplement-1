@@ -1,19 +1,13 @@
-# test_areas.py
-import unittest
-from areas import area_rectangle, area_circle, area_triangle
+# areas.py
+import math
 
-class TestAreas(unittest.TestCase):
-    def test_area_rectangle_regular(self):
-        self.assertEqual(area_rectangle(4, 5), 20)
+def area_rectangle(length, width):
+    if length == width:
+        return length ** 2
+    return length * width
 
-    def test_area_rectangle_square(self):
-        self.assertEqual(area_rectangle(4, 4), 16)
+def area_circle(radius):
+    return math.pi * (radius ** 2)
 
-    def test_area_circle(self):
-        self.assertAlmostEqual(area_circle(3), 28.274, places=3)
-
-    def test_area_triangle(self):
-        self.assertEqual(area_triangle(10, 5), 25)
-
-if __name__ == "__main__":
-    unittest.main()
+def area_triangle(base, height):
+    return 0.5 * base * height
